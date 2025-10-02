@@ -1,8 +1,8 @@
 import { Suspense } from "react"
 import Banner from "./components/Banner"
-import Customer from "./components/Customer"
 import Footer from "./components/Footer"
 import Navbar from "./components/navbar"
+import Main from "./components/Main"
 
 
 const fetchTickets = async () => {
@@ -12,17 +12,21 @@ const fetchTickets = async () => {
 
 
 function App() {
-  const ticketsPromise = fetchTickets()
+  const ticketsPromise = fetchTickets();
   
  
 
   return (
     <div>
-      <Navbar>
+      
+        <Navbar className="w-11/12 mx-auto py-3">
       </Navbar>
-      <Banner></Banner>
+      
+      <Banner>
+
+      </Banner>
       <Suspense fallback={<span className="loading loading-ball loading-xl"></span>}>
-        <Customer ticketsPromise={ticketsPromise}></Customer>
+      <Main ticketsPromise={ticketsPromise}></Main>
       </Suspense>
       <Footer></Footer>
     </div>

@@ -42,7 +42,7 @@ const Footer = () => {
                         
                     </ul>
                 </div>
-                <div className='text-left md:text-center text-gray-500 text-sm'>
+                <div className='flex justify-center text-center text-gray-500 text-sm'>
                     @ 2025 CS - Ticket System.
                     <br className='block md:hidden' />All rights reserved
                     
